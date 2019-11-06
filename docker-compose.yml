@@ -4,7 +4,8 @@ version: '2.3'
 
 services:
   ftpd_server:
-    image: stilliard/pure-ftpd:hardened
+    build:
+        context: .
     container_name: pure-ftpd
     ports:
       - "$PORT:$PORT"

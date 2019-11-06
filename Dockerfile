@@ -75,10 +75,5 @@ RUN chmod u+x /run.sh
 # default publichost, you'll need to set this for passive support
 ENV PUBLICHOST localhost
 
-# couple available volumes you may want to use
-VOLUME ["/home/ftpusers", "/etc/pure-ftpd/passwd"]
-
 # startup
 CMD /run.sh -l puredb:/etc/pure-ftpd/pureftpd.pdb -E -j -R -P $PUBLICHOST
-
-EXPOSE 21 30000-30009
